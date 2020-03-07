@@ -1,0 +1,171 @@
+print('Hello World')
+str1='Cisco'
+str2='Networking'
+str3='Academy'
+space=' '
+print(str1+space+str2+space+str3)
+print(str1+str2+str3)
+print(str1,str2,str3)
+firstname=input('What is your name?')
+print('Hello' + firstname)
+
+def message():
+	print("ponga un valor:")
+    
+message()
+a=int(input())
+message()
+b=int(input())
+message()
+c=int(input())
+
+#función con parámetro: name
+#no necesito definir primero name
+def hi(name):
+    print("Hi, ", name)
+    
+hi("Greg")
+
+#funciones con parámetros
+def hiAll(name1, name2):
+    print("Hi,", name2)
+    print("Hi,", name1)
+    
+def address(street, city, postalCode):
+    print("Your address is:", street, "St.,", city, postalCode)
+s=input("Street: ")
+pC=input("Postal Code: ")
+c=input("City:")
+
+address(s, c, pC)    
+
+def subtra(a, b):
+    print(a-b)
+
+subtra(5,2)
+subtra(2,5)
+subtra(5, b=2)
+#este no funciona 
+subtra(a=5, 2)
+
+#Retorno de valores
+
+def multiply(a, b):
+    return a*b
+print(multiply(3,4))
+
+#si no pongo qué retornar, va a salir none 
+def multiply(a, b):
+    return 
+print(multiply(3,4))
+
+#puedo asignar a una variable 
+def wishes():
+    return "Happy Birthday!"
+w=wishes()
+print(w)
+
+def wishes():
+    print("My wishes")
+    return "Happy Birthday!"
+
+wishes()
+
+def wishes():
+    print("My wishes")
+    return "Happy Birthday!"
+
+print(wishes())
+
+def hiEverybody(myList):
+    for name in myList:
+        print("Hi, ", name)
+        
+hiEverybody(["Adam", "john", "lucy", "martina"])
+
+def createList(n):
+    myList=[]
+    for i in range(n):
+        myList.append(i)
+    return myList
+
+print(createList(10))
+print(createList(20))
+
+#funciones lambda 
+#la forma es lambda argumentos: resultado
+
+def isPrime(a):
+    for i in range(1, 20)
+    if a % i==0 
+        return TRUE
+
+def 1100kmtompg(litres):
+    gallons=litres/3.785411784
+    miles=100*1000/1609.344
+    return miles/gallons
+def mpgtol100km(miles):
+    km100=miles*1609.344/1000/100
+    litres=3.785411784
+    return litres/km100
+
+def isYearLeap(year):
+    if year % 4==0:
+        return True
+    else:
+        return False
+year=int(input("inserte un año entre 1900 y 2015:"))
+print(year, isYearLeap(year))
+
+def isYearLeap(year):
+    if year % 4!=0:
+        return False
+    elif year%100 !=0:
+        return True
+    elif year % 400 !=0:
+        return False
+    else:
+        return True
+    
+year=int(input("inserte un año entre 1900 y 2015:"))
+print(year, isYearLeap(year))
+
+  
+def isYearLeap(myList):
+    for year in myList:
+        if year % 4==0:
+            return True
+        else:
+            return False
+year=int(input("inserte 3 años entre 1900 y 2015:"))
+print(isYearLeap([year1, year2, year3]))
+  
+
+
+def bisiesto(x):
+  if x%4==0 and (not(x%100==0) or x%400==0 ):
+    texto='es bisiesto.'
+  else:
+    texto='es un año NO bisiesto.'
+  return texto
+x=int(input('Introduzca un año entre 1600 y 2500:'))
+print(x,bisiesto(x))
+
+
+testData = [1900, 2000, 2016, 1987]
+testResults = [False, True, True, False]
+for i in range(len(testData)):
+yr = testData[i]
+	print(yr,"->",end="")
+	result = isYearLeap(yr)
+	if result == testResults[i]:
+		print("OK")
+	else:
+		print("Failed")
+
+        
+def daysInMonth(year, month):
+        
+    
+
+
