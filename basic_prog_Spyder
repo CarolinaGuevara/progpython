@@ -1,0 +1,163 @@
+
+print("hello World")
+
+1<2
+1>=1
+"Caro"*x
+str1="Cisco"
+str2="networking"
+str3="Academy"
+space=" "
+print(str1+space+str2+space+str3)
+print(str1+str2+str3)
+print(str1,str2,str3)
+
+#no puede concatenar string con número
+x=3
+print("This value of X is " +x)
+print("This value of X is ", x)
+
+#transformo x a string
+print("This value of X is "+str(x))
+#aquí si transformo x a string
+x=str(x)
+
+pi=22/7
+print(pi)
+print("{:.2f}]" .format(pi))
+print("{:.4f}]" .format(pi))
+
+hostnames=["R1", "R2", "R3", "S1", "S2"]
+type(hostnames)
+len(hostnames)
+hostnames
+
+listatodotipo=["R1", "R2", "R3", "S1", "S2", 1, 5, 3**6, True]
+len(listatodotipo)
+
+#llamo a los valores por su ubicación
+hostnames[0]
+#no me arroja la posición 5 porque no hay
+hostnames[5]
+hostnames[-1]
+#puedo actualizar los valores
+hostnames[0]="RTR1"
+hostnames
+#eliminar un valor de la posición 3
+del hostnames[3]
+hostnames
+
+#para declarar el diccionario es con llave
+ipAddress={"R1":"10.1.1.1", "R2":"10.2.2.1", "R3":"10.3.3.1"}
+type(ipAddress)
+#arroja el valor de la key R1
+ipAddress['R1']
+#puedo aumentar un valor en el diccionario como S1 asignando el valor correspondiente
+ipAddress["S1"]="10.1.1.10"
+ipAddress
+#puedo hacer la consulta --> R3 está en ipAddress?
+"R3" in ipAddress
+
+# INPUT FUNCTION
+
+firstName=input("What is your first name?")
+
+print("Hello" + firstName+"!")
+
+type(firstName)
+
+#HACER UN SCRIPT PARA OBTENER EL NOMBRE, APELLIDO, UBIC Y EDAD
+firstName=input("What is your first name?")
+lastName=input("What is your last name?")
+location=input("Where do you live?")
+age=input("How old are you?")
+age=str(age)
+space=" "
+
+print("Hello my little"+firstName+space+lastName+"!, Do you need me to pick you up from"+location+" to take you to celebrate your birthday #"+age)
+      
+#FUCNTIONS AND LOOPS
+nativeVLAN=1
+dataVLAN=100
+#cuando encuentro algo de : se necesita 3 espacios o un tab (identación)
+if nativeVLAN==dataVLAN:    
+    print("The native VLAN and the data VLAN are the same.")
+else:
+    print("This native VLAN and the data VLAN are different.")     
+    
+#elif se debe usar dentro de un if y antes de un else y se ejecuta siempre y cuando sea para la condición de falso y puedo utilizar cuantas condiciones que necesite
+
+aclNum = int(input("What is the IPv4 ACL number?"))
+if aclNum>=1 and aclNum<=99:
+    print("this is a standard IPv4ACL.")
+elif aclNum >=100 and aclNum <=199:
+    print("This is a extended IPv4 ACL.")
+else:
+    print("This is not a standard or extendend IPc4 ACL.")
+    
+#BOUBLES LOOPS
+#item no es una palabra reservada, puedo poner cualquier cosa aunque no esté definido
+devices=["R1", "R2", "R3", "S1", "S2"]
+for item in devices:
+    print(item)
+
+#un Loop con un if
+for item in devices: 
+    if "R" in item:
+            print(item)
+
+#declaro una lista vacía
+switches=[]
+for item in devices:
+        if "S" in item:
+                switches.append(item)
+
+print(switches)
+
+#WHILE
+
+x=input("Enter a number to count to: ")
+x=int(x)
+y=1
+while y<=x:
+        print(y)
+        y=y+1
+        
+#bucle infinito
+#para salir de ese bucle infinito utilizamos el break
+x=input("Enter a number to count to")
+x=int(x)
+y=1
+while True:
+        print(y)
+        y=y+1
+        if y>x:
+            break
+
+while True:
+    x=input("Enter a number to count to:")
+    if x=='q' or x=='quit':
+            break
+        x=int(x)
+        y=1
+        while True:
+            print(y)
+            y=y+1
+            if y>x:
+                break
+        
+for i in range(5):
+    print(i+1)
+    
+result=0
+n=5
+for i in range(1, n+1):
+    result +=i
+    #this ^^ is he shorthand for
+    #result=result+i
+print(result)    
+
+for i in range(10, 0, -2):
+    print(i)
+    
+    
