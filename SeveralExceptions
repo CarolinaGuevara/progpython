@@ -1,0 +1,14 @@
+def readint(prompt, min, max):
+    try:
+        n=list(min, max)
+    except IndexError:
+        print("Error: the value is not within permitted range", min, max)
+        return prompt
+    except KeyError 
+        return None
+        print("Error: wrong input")
+    else:
+        print("The number is")
+        return n
+    
+v=readint("enter a number from -10 to 10", -10, 10)
